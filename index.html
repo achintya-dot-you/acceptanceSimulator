@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>UWC Acceptance Simulator</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main>
+        <h1 id="mainHeading" class="title">Acceptance Simulator</h1>
+        <p class="description" id="desc">Select your day and this totally scientific website will calculate your chances of
+            getting into UWC.</p>
+
+        <section class="grid" id="grid">
+            <a class='card' onclick="changeContent()">
+                <h2> Day 1 </h2>
+            </a>
+
+            <a class='card' onclick="changeContent2()">
+                <h2>Day 2</h2>
+            </a>
+
+            <a class='card' onclick="changeContent2()">
+                <h2>Day 3</h2>
+            </a>
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+    <script>
+        function changeContent() {
+            // Update the main heading with the selected day
+            document.getElementById('mainHeading').innerText = "100%!";
+            document.getElementById('grid').style.visibility = "hidden"
+            document.getElementById('desc').innerHTML = "<a href='/'> Go Back? </a>"
+        }
+
+        function changeContent2(){
+            document.getElementById('mainHeading').innerText = "25% :(";
+            document.getElementById('grid').style.visibility = "hidden"
+            document.getElementById('desc').innerHTML = "<a href='/'> Go Back? </a>"
+        }
+
+    </script>
+
+</body>
+
+</html>
